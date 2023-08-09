@@ -1,162 +1,164 @@
 const repos = [ 
   {
     id: 1,
-    name: 
-    description: 
-    pinned:
-    starTotal:
-    branchNum:
-    updated:
-    issues:
-  },
-  {
-    id: 1,
-    name: 
-    description: 
-    pinned:
-    starTotal:
-    branchNum:
-    updated:
-    issues:
-  },
-  {
-    id: 1,
-    name: 
-    description: 
-    pinned:
-    starTotal:
-    branchNum:
-    updated:
-    issues:
-  },
-  {
-    id: 1,
-    name: 
-    description: 
-    pinned:
-    starTotal:
-    branchNum:
-    updated:
-    issues:
-  },
-  {
-    id: 1,
-    name: 
-    description: 
-    pinned:
-    starTotal:
-    branchNum:
-    updated:
-    issues:
+    name: "Sorting Hat",
+    description: "A hat that sorts",
+    isPinned: true,
+    starNum: 15,
+    branchNum: 5,
+    lastUpdated: 3082023,
+    issueNum: 15
   },
 ]
+ 
+// {
+//   id: 1,
+//   name: 
+//   description: 
+//   isPinned:
+//   starNum:
+//   branchNum:
+//   lastUpdated:
+//   issueNum:
+// },
+// {
+//   id: 1,
+//   name: 
+//   description: 
+//   isPinned:
+//   starNum:
+//   branchNum:
+//   lastUpdated:
+//   issueNum:
+// },
+// {
+//   id: 1,
+//   name: 
+//   description: 
+//   isPinned:
+//   starNum:
+//   branchNum:
+//   lastUpdated:
+//   issueNum:
+// },
+// {
+//   id: 1,
+//   name: 
+//   description: 
+//   isPinned:
+//   starTotal:
+//   branchNum:
+//   updated:
+//   issueNum:
+// },
+// ]
 
-const packages = [
-  {
-    id: 1,
-    name:
-    description:
-    learnMore:
-  },
-  {
-    id: 1,
-    name:
-    description:
-    learnMore:
-  },
-  {
-    id: 1,
-    name:
-    description: 
-    learnMore:
-  },
-  {
-    id: 1,
-    name:
-    description:
-    learnMore:
-  },
-  {
-    id: 1,
-    name:
-    description:
-    learnMore:
-  },
-  {
-    id: 1,
-    name:
-    description:
-    learnMore:
-  },
-]
+// const packages = [
+//   {
+//     id: 1,
+//     name:
+//     description:
+//     learnMore:
+//   },
+//   {
+//     id: 1,
+//     name:
+//     description:
+//     learnMore:
+//   },
+//   {
+//     id: 1,
+//     name:
+//     description:
+//     learnMore:
+//   },
+//   {
+//     id: 1,
+//     name:
+//     description:
+//     learnMore:
+//   },
+//   {
+//     id: 1,
+//     name:
+//     description:
+//     learnMore:
+//   },
+//   {
+//     id: 1,
+//     name:
+//     description:
+//     learnMore:
+//   },
+// ]
 
-const projects = [
-  {
-    id: 1,
-    name:
-    updated:
-    description:
-  },
-  {
-    id: 1,
-    name:
-    updated:
-    description:
-  },
-  {
-    id: 1,
-    name:
-    updated:
-    description:
-  },
-  {
-    id: 1,
-    name:
-    updated:
-    description:
-  },
-  {
-    id: 1,
-    name:
-    updated:
-    description:
-  },
-]
+// const projects = [
+//   {
+//     id: 1,
+//     name:
+//     updated:
+//     description:
+//   },
+//   {
+//     id: 1,
+//     name:
+//     updated:
+//     description:
+//   },
+//   {
+//     id: 1,
+//     name:
+//     updated:
+//     description:
+//   },
+//   {
+//     id: 1,
+//     name:
+//     updated:
+//     description:
+//   },
+//   {
+//     id: 1,
+//     name:
+//     updated:
+//     description:
+//   },
+// ]
 
-const pinnedRepos = [
-  {
-    id: 1,
-    name:
-    description:
-    language:
-    starred:
-    branchNum:
-  },
-  {
-    id: 1,
-    name:
-    description:
-    language:
-    starred:
-    branchNum:
-  },
-  {
-    id: 1,
-    name:
-    description:
-    language:
-    starred:
-    branchNum:
-  },
-  {
-    id: 1,
-    name:
-    description:
-    language:
-    starred:
-    branchNum:
-  },
-]
+// const pinnedRepos = [
+//   {
+//     id: 1,
+//     name:
+//     description:
+//     language:
+//     starred:
+//     branchNum:
+//   },
+//   {
+//     id: 1,
+//     name:
+//     description:
+//     language:
+//     starred:
+//     branchNum:
+//   },
+//   {
+//     id: 1,
+//     name:
+//     description:
+//     language:
+//     starred:
+//     branchNum:
+//   },
+//   {
+//     id: 1,
+//     name:
+//     description:
+//     language:
+//     starred:
+//     branchNum:
+//   },
+// ]
 
 // utility function
 const renderToDom = (divId, htmlToRender) => {
@@ -178,5 +180,7 @@ const cardsOnDom = (array) => {
   </div>
 </div>`
   }
-  renderToDom(divId, domString);
+  renderToDom("#card-container", domString);
 };
+
+cardsOnDom(repos);
