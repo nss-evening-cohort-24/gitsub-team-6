@@ -1,0 +1,12 @@
+.card-img-top {
+  width: 280px;
+  height: 205px;
+}
+
+.followers-container {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 14px;
+}
