@@ -67,7 +67,7 @@ const packages = [
   {
     id: 1,
     name:
-    description:
+    description: 
     learnMore:
   },
   {
