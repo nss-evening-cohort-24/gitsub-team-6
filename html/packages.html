@@ -56,24 +56,25 @@
   </div>
  </div>
  <div id="packages-container" class="container"></div>
- <form>
- <div id="form-container" class="container">
+ <form id="package-form" >
+ <div class="container">
   <div class="form-group">
   <div class="jumbotron">   
     <h1 class="display-4">Create a new project</h1>   
     <p class="lead">Coordinate, track, and update your work in one place, so projects stay transparent and on schedule.</p>   
     <hr class="my-4">
-  <label for="project-name">Project Board Name</label>
-  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter project name">
+  <label for="name">Project Board Name</label>
+  <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter project name">
 </div>
 <div class="form-group">
   <label for="description">Description</label>
   <input type="text" class="form-control" id="description" placeholder="Description">
 </div>
-<button type="submit" class="btn btn-primary">Create project</button>
+<button type="submit" id='submitPackage' data-href='./packages.html' class="btn btn-primary">Create project</button>
 </div>
 </div>
 </form>
+
  
 <footer id="footer"> 
   <div class="footer-div" id="footer-id">

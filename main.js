@@ -227,9 +227,9 @@ const reposOnDom = (array) => {
     <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">${repo.name}</h5>
+    <p class="card-text">${repo.description}</p>
+    <a href="#" class="btn btn-primary" id='delete--${repo.id}'>Go somewhere</a>
   </div>
 </div>`
   }
@@ -245,9 +245,9 @@ const projectsOnDom = (array) => {
     <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">${project.name}</h5>
+    <p class="card-text">${project.description}</p>
+    <a href="#" class="btn btn-primary" id='delete--${project.id}'>Go somewhere</a>
   </div>
 </div>`
   }
@@ -289,10 +289,70 @@ const pinsOnDom = (array) => {
   renderToDom("#pins-container", domString);
 };
 
+const eventListeners = () => {
+let forms = document.querySelectorAll('form');
+// **Packages Form Submit**
+
+const packageSubmit = (e) => {
+  e.preventDefault();
+
+  const packageObj = {
+    id: packages.length + 1,
+    name: document.querySelector('#name').value,
+    description: document.querySelector('#description').value
+    }
+    packages.push(packageObj)
+    packagesOnDom(packages)
+}
+
+
+forms.forEach(item => {
+  item.addEventListener('submit', packageSubmit)
+});
+
+
+// **Repos Form Submit**
+const repoSubmit = (e) => {
+  e.preventDefault();
+
+  const repoObj = {
+    id: repos.length + 1,
+    name: document.querySelector('#name').value,
+    description: document.querySelector('#description').value
+    }
+    repos.push(repoObj)
+    reposOnDom(repos)
+}
+
+
+forms.forEach(item => {
+  item.addEventListener('submit', repoSubmit)
+})
+
+// **Projects Form Submit**
+const projectSubmit = (e) => {
+  e.preventDefault();
+
+  const projectObj = {
+    id: projects.length + 1,
+    name: document.querySelector('#name').value,
+    description: document.querySelector('#description').value
+    }
+    projects.push(projectObj)
+    projectsOnDom(projects)
+}
+
+
+forms.forEach(item => {
+  item.addEventListener('submit', projectSubmit)
+})
+
+};
 
 
 const startApp = () => {
   getData();
+  eventListeners();
 };
 
 startApp();
