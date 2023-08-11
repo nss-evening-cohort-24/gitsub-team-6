@@ -8,7 +8,7 @@ const repos = [
     starNum: 15,
     branchNum: 5,
     lastUpdated: 3082023,
-    issueNum: 10,
+    issueNum: 10
   },
 
   {
@@ -19,7 +19,7 @@ const repos = [
     starNum: 23,
     branchNum: 2,
     lastUpdated: 3082023,
-    issueNum: 9,
+    issueNum: 9
   },
   
   {
@@ -30,7 +30,7 @@ const repos = [
     starNum: 100,
     branchNum: 4,
     lastUpdated: 3082023,
-    issueNum: 4,
+    issueNum: 4
   },
   
   {
@@ -41,7 +41,7 @@ const repos = [
     starNum: 443,
     branchNum: 6,
     lastUpdated: 3082023,
-    issueNum: 6,
+    issueNum: 6
   },
 
   {
@@ -52,55 +52,61 @@ const repos = [
     starNum: 11,
     branchNum: 11,
     lastUpdated: 3082023,
-    issueNum: 11,
-  },
+    issueNum: 11
+  }
 ]
 
 const packages = [
 
   {
     id: 1,
+    imageUrl: 'https://cdn2.iconfinder.com/data/icons/leto-blue-big-data/64/big_data_olap_array_multidimentional_volume-64.png',
     name: "Docker",
     description: "A software platform used for building applications based on catainers - small and lightweight execution environments.",
-    learnMore: "This is a button",
+    learnMore: "https://www.docker.com"
   },
 
   {
     id: 2,
+    imageUrl: 'https://cdn1.iconfinder.com/data/icons/leto-design-creativity/64/__logo_symbol_wordmark-64.png',
     name: "Apache Maven",
     description: "A default package manager used for the java programming language and the Java runtime environment.",
-    learnMore: "This is a button",
+    learnMore: "https://www.docker.com"
   },
 
   {
     id: 3,
+    imageUrl: 'https://cdn2.iconfinder.com/data/icons/leto-blue-big-data/64/big_data_cdn_content_delivery_network_layers-64.png',
     name: "Nuget",
     description: "A free and open source package manager used for the Microsoft development platforms including .NET.",
-    learnMore: "This is a button",
+    learnMore: "https://www.docker.com"
   },
 
   {
     id: 4,
+    imageUrl: 'https://cdn1.iconfinder.com/data/icons/space-travel-flat/340/space_astronomy_system_planet_universe_galaxy_star_neptune-64.png',
     name: "RubyGems",
     description: "A standard format for distributing Ruby programs and libraries used for the Ruby programming language.",
-    learnMore: "This is a button",
+    learnMore: "https://www.docker.com"
   },
-
+  
   {
     id: 5,
+    imageUrl: 'https://cdn1.iconfinder.com/data/icons/space-travel-flat/340/space_astronomy_universe_galaxy_star_cosmos_planet_science_astrology-64.png',
     name: "npm",
     description: "A package manager for JavaScript, including with Node.js. npm makes it easy for developers to share and reuse code.",
-    learnMore: "This is a button",
+    learnMore: "https://www.docker.com"
   },
 
   {
     id: 6,
+    imageUrl: 'https://cdn1.iconfinder.com/data/icons/space-travel-flat/340/space_astronomy_system_planet_universe_galaxy_star_jupiter-64.png',
     name: "Containers",
     description: "A single place for your team to manage Docker images and decide who can see and access your images.",
-    learnMore: "This is a button",
-  },
+    learnMore: "https://www.docker.com"
+  }
 
-]
+];
 
 const projects = [
 
@@ -115,7 +121,7 @@ const projects = [
     id: 2,
     name: "Dangle Autem",
     updated: "Updated 1 hour ago",
-    description: "Illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo",
+    description: "Illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo"
   },
 
   {
@@ -129,7 +135,7 @@ const projects = [
     id: 4,
     name: "Glaflarbo",
     updated: "Updated 44 minutes ago",
-    description: "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    description: "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
   },
 
   {
@@ -137,7 +143,7 @@ const projects = [
     name: "Praesent Gravida",
     updated: "Updated 3 months ago",
     description: "Proin finibus placerat urna ac dignissim."
-  },
+  }
 ]
 
 const pinnedRepos = [
@@ -147,7 +153,7 @@ const pinnedRepos = [
     description: "An app that pulls the local heelys stock",
     language: "JavaScript",
     starred: 400,
-    branchNum: 7,
+    branchNum: 7
   },
 
   {
@@ -156,7 +162,7 @@ const pinnedRepos = [
     description: "a lorm ipsum generaator with full stack words and terms from the curriculum",
     language: "JavaScript",
     starred: 37,
-    branchNum: 12,
+    branchNum: 12
   },
 
   {
@@ -165,7 +171,7 @@ const pinnedRepos = [
     description: "HTTRiRi - HTTP Status Codes as Portrayed by Rihanna GIFs",
     language: "TypeScript",
     starred: 27,
-    branchNum: 11,
+    branchNum: 11
   },
 
   {
@@ -174,7 +180,7 @@ const pinnedRepos = [
     description: "HTTRiRi - HTTP Status Codes as Portrayed by Tim Robinson GIFs",
     language: "TypeScript",
     starred: 2,
-    branchNum: 32,
+    branchNum: 32
   },
 
   {
@@ -183,24 +189,40 @@ const pinnedRepos = [
     description: "Website for www.ambitionfund.org, micro-grant program to provide support for underrepresented people who need financial assistance pursuing professional development opportunities in technology...",
     language: "Javascript",
     starred: 7,
-    branchNum: 99,
-  },
-]
+    branchNum: 99
+  }
+];
 
 // utility function
+
+const getData = () => {
+  let page = document.body.id;
+  switch (page) {
+    case "main":
+      pinsOnDom(pinnedRepos);
+      break;
+    case "pack":
+      packagesOnDom(packages);
+      break;
+    case "proj":
+      projectsOnDom(projects);
+      break;
+    case "repo":
+      reposOnDom(repos);
+      break;
+  }
+};
 
 const renderToDom = (divId, htmlToRender) => {
   const targetedId = document.querySelector(divId);
   targetedId.innerHTML = htmlToRender;
-  console.log(divId)
 };
 
-// const cardsOnDom = () => {
 
 
-const reposOnDom = (repos) => {
+const reposOnDom = (array) => {
   let domString = ''
-  for (const repo of repos) {
+  for (const repo of array) {
     domString += `
     <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
@@ -214,11 +236,11 @@ const reposOnDom = (repos) => {
   renderToDom("#repos-container", domString);
 };
 
-reposOnDom(repos);
 
-const projectsOnDom = (projects) => {
+
+const projectsOnDom = (array) => {
   let domString = ''
-  for(const project of projects) {
+  for(const project of array) {
     domString += `
     <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
@@ -232,35 +254,34 @@ const projectsOnDom = (projects) => {
   renderToDom("#projects-container", domString);
 };
 
-// projectsOnDom(projects);
-
-const packagesOnDom = (packages) => {
+const packagesOnDom = (array) => {
   let domString = ''
-  for(const package of packages) {
+  for (const item of array) {
     domString += `
-    <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title" ><img src="${item.imageUrl}" class="card-img-top pack-img" alt="...">${item.name}</h5>
+    <p class="card-text">${item.description}</p>
+    <a href="${item.learnMore}" target="_blank">Learn More</a>
+    <a href="#" class="btn btn-primary" id='delete--${item.id}'>Delete</a>
   </div>
-</div>`
-  }
-  renderToDom("#packages-container", domString);
+  </div>
+`
+}
+renderToDom("#packages-container", domString);
 };
 
-packagesOnDom(packages);
 
-const pinsOnDom = (pinnedRepos) => {
+
+const pinsOnDom = (array) => {
   let domString = ''
-  for(const pinnedRepo of pinnedRepos) {
+  for(const pinnedRepo of array) {
     domString += `
     <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">${pinnedRepo.name}</h5>
+    <p class="card-text">${pinnedRepo.description}</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>`
@@ -268,6 +289,10 @@ const pinsOnDom = (pinnedRepos) => {
   renderToDom("#pins-container", domString);
 };
 
-pinsOnDom(pinnedRepos);
 
-//event listeners
+
+const startApp = () => {
+  getData();
+};
+
+startApp();
