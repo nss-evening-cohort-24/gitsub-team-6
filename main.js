@@ -71,7 +71,7 @@ const packages = [
     imageUrl: 'https://cdn1.iconfinder.com/data/icons/leto-design-creativity/64/__logo_symbol_wordmark-64.png',
     name: "Apache Maven",
     description: "A default package manager used for the java programming language and the Java runtime environment.",
-    learnMore: "https://www.docker.com"
+    learnMore: "https://maven.apache.org/"
   },
 
   {
@@ -79,7 +79,7 @@ const packages = [
     imageUrl: 'https://cdn2.iconfinder.com/data/icons/leto-blue-big-data/64/big_data_cdn_content_delivery_network_layers-64.png',
     name: "Nuget",
     description: "A free and open source package manager used for the Microsoft development platforms including .NET.",
-    learnMore: "https://www.docker.com"
+    learnMore: "https://www.nuget.org/"
   },
 
   {
@@ -87,7 +87,7 @@ const packages = [
     imageUrl: 'https://cdn1.iconfinder.com/data/icons/space-travel-flat/340/space_astronomy_system_planet_universe_galaxy_star_neptune-64.png',
     name: "RubyGems",
     description: "A standard format for distributing Ruby programs and libraries used for the Ruby programming language.",
-    learnMore: "https://www.docker.com"
+    learnMore: "https://rubygems.org/"
   },
   
   {
@@ -95,7 +95,7 @@ const packages = [
     imageUrl: 'https://cdn1.iconfinder.com/data/icons/space-travel-flat/340/space_astronomy_universe_galaxy_star_cosmos_planet_science_astrology-64.png',
     name: "npm",
     description: "A package manager for JavaScript, including with Node.js. npm makes it easy for developers to share and reuse code.",
-    learnMore: "https://www.docker.com"
+    learnMore: "https://www.npmjs.com/"
   },
 
   {
@@ -103,7 +103,7 @@ const packages = [
     imageUrl: 'https://cdn1.iconfinder.com/data/icons/space-travel-flat/340/space_astronomy_system_planet_universe_galaxy_star_jupiter-64.png',
     name: "Containers",
     description: "A single place for your team to manage Docker images and decide who can see and access your images.",
-    learnMore: "https://www.docker.com"
+    learnMore: "https://www.solarwinds.com/resources/it-glossary/container"
   }
 
 ];
@@ -205,7 +205,7 @@ const getData = () => {
       packagesOnDom(packages);
       break;
     case "proj":
-      projectsOnDom(projects);
+      projectsOnDom();
       break;
     case "repo":
       reposOnDom(repos);
@@ -238,21 +238,21 @@ const reposOnDom = (array) => {
 
 
 
-const projectsOnDom = (array) => {
-  let domString = ''
-  for(const project of array) {
-    domString += `
-    <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">${project.name}</h5>
-    <p class="card-text">${project.description}</p>
-    <a href="#" class="btn btn-primary" id='delete--${project.id}'>Go somewhere</a>
-  </div>
-</div>`
-  }
-  renderToDom("#projects-container", domString);
-};
+// const projectsOnDom = (array) => {
+//   let domString = ''
+//   for(const project of array) {
+//     domString += `
+//     <div class="card" style="width: 18rem;">
+//   <img src="..." class="card-img-top" alt="...">
+//   <div class="card-body">
+//     <h5 class="card-title">${project.name}</h5>
+//     <p class="card-text">${project.description}</p>
+//     <a href="#" class="btn btn-primary" id='delete--${project.id}'>Go somewhere</a>
+//   </div>
+// </div>`
+//   }
+//   renderToDom("#projects-container", domString);
+// };
 
 const packagesOnDom = (array) => {
   let domString = ''
@@ -262,8 +262,8 @@ const packagesOnDom = (array) => {
   <div class="card-body">
     <h5 class="card-title" ><img src="${item.imageUrl}" class="card-img-top pack-img" alt="...">${item.name}</h5>
     <p class="card-text">${item.description}</p>
-    <a href="${item.learnMore}" target="_blank">Learn More</a>
-    <a href="#" class="btn btn-primary" id='delete--${item.id}'>Delete</a>
+    <a href="${item.learnMore}" target="_blank" class="btn btn-secondary">Learn More</a>
+    <a href="#" class="btn btn-secondary" id='delete--${item.id}'>Delete</a>
   </div>
   </div>
 `
@@ -288,6 +288,44 @@ const pinsOnDom = (array) => {
   }
   renderToDom("#pins-container", domString);
 };
+
+const tableRow = (array) => {
+  let domString = ''
+  for (const item of array) {
+    domString +=`
+    <tr>
+      <td>${item.name}</td>
+      <td>${item.updated}</td>
+      <td>${item.description}</td>
+    </tr>
+  `
+  }
+  return domString;
+}
+
+const projectsOnDom = () => {
+let table = ''
+table +=`
+<table class="table table-dark table-striped" style="width: 600px">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Updated</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  ${tableRow(projects)}
+</tbody>
+</table>
+`
+
+if (document.body.id === 'proj') {
+  renderToDom('#projects-container', table)
+}
+}
+
+
 
 const eventListeners = () => {
 let forms = document.querySelectorAll('form');
