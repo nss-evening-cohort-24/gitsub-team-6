@@ -1,3 +1,14 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#main-section {
+  display: flex;
+  flex-direction: row;
+}
+
 .card-img-top {
   width: 280px;
   height: 205px;
@@ -14,4 +25,9 @@
 .pack-img {
   width: 40px;
   height: 40px;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
 }
