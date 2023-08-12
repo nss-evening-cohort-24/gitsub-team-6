@@ -229,11 +229,16 @@ const reposOnDom = (array) => {
   for (const repo of array) {
     domString += `
     <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${repo.name}</h5>
     <p class="card-text">${repo.description}</p>
     <p class="card-text">${repo.tags}</p>
+    <p class="card-text">${repo.isPinned ? '<i class="fas fa-code-branch" id="branch-btn"></i>' : ''}</p>
+    <p class="card-text">${repo.starNum ? '<i class="fa-regular fa-star" style="color: #353626;"></i>' : ''}</p>
+    <p class="card-text">${repo.branchNum}</p>
+    <p class="card-text">${repo.lastUpdated}</p>
+    <p class="card-text">${repo.issueNum}</p>
+
     <a href="#" class="btn btn-primary" id='delete--${repo.id}'>Go somewhere</a>
   </div>
 </div>`
