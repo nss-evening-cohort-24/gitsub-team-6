@@ -329,8 +329,10 @@ const packageSubmit = (e) => {
     name: document.querySelector('#name').value,
     description: document.querySelector('#description').value
     }
+    packageObj.imageUrl = 'https://cdn2.iconfinder.com/data/icons/leto-blue-big-data/64/big_data-10-512.png'
     packages.push(packageObj)
     packagesOnDom(packages)
+    forms.item.reset()
 }
 
 
@@ -390,6 +392,16 @@ const projectSubmit = (e) => {
 
 forms.forEach(item => {
   item.addEventListener('submit', projectSubmit)
+})
+
+const removePackage = document.querySelector('#packages-container')
+removePackage.addEventListener('click', (e) => {
+  if(e.target.id.includes('delete')) {
+    const [, id] = e.target.id.split('--')
+    const index = packages.findIndex(package => package.id === Number(id))
+    packages.splice(index, 1)
+    packagesOnDom(packages)
+    }
 })
 
 };
