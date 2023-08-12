@@ -114,21 +114,25 @@ const projects = [
     id: 1,
     name: "Lorem Ipsum",
     updated: "Updated 23 seconds ago",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+    contributors: ["cnfairall", "Bonni535"]
+    
   },
 
   {
     id: 2,
     name: "Dangle Autem",
     updated: "Updated 1 hour ago",
-    description: "Illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo"
+    description: "Illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo",
+    contributors: ["cnfairall", "GitEbachS"]
   },
 
   {
     id: 3,
     name: "Bleegle Ramoon",
     updated: "Updated 14 days ago",
-    description: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
+    description: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
+    contributors: ["JohnnySaniat", "JSPICELA"]
   },
 
   {
@@ -142,8 +146,9 @@ const projects = [
     id: 5,
     name: "Praesent Gravida",
     updated: "Updated 3 months ago",
-    description: "Proin finibus placerat urna ac dignissim."
-  }
+    description: "Proin finibus placerat urna ac dignissim.",
+    contributors: ["JohnnySaniat", "Bonni535", "GitEbachS", "JSPICELA"]
+  },
 ]
 
 const pinnedRepos = [
@@ -193,7 +198,6 @@ const pinnedRepos = [
   }
 ];
 
-// utility function
 
 const getData = () => {
   let page = document.body.id;
