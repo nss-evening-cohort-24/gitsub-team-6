@@ -1,12 +1,13 @@
-body {
+/* body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
+  justify-content: center; 
+} */
 
 #main-section {
   display: flex;
-  flex-direction: row;
+  flex: wrap;
+  margin-bottom: 100px;
 }
 
 .card-img-top {
@@ -30,4 +31,15 @@ body {
 .nav-item {
   display: flex;
   justify-content: center;
+}
+
+footer {
+  position: fixed;
+  margin-top: 20px;
+  bottom: 0;
+   width: 100%;
+   background-color: rgb(62, 151, 210);
+   color: black;
+   text-align: center;
+   
 }
