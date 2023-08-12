@@ -233,6 +233,7 @@ const reposOnDom = (array) => {
   <div class="card-body">
     <h5 class="card-title">${repo.name}</h5>
     <p class="card-text">${repo.description}</p>
+    <p class="card-text">${repo.tags}</p>
     <a href="#" class="btn btn-primary" id='delete--${repo.id}'>Go somewhere</a>
   </div>
 </div>`
@@ -348,7 +349,8 @@ const repoSubmit = (e) => {
   const repoObj = {
     id: repos.length + 1,
     name: document.querySelector('#name').value,
-    description: document.querySelector('#description').value
+    description: document.querySelector('#description').value,
+    tags: document.querySelector('#tags').value
     }
     repos.push(repoObj)
     reposOnDom(repos)
