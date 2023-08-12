@@ -66,18 +66,15 @@
   <div class="form-group">
     <label for="description">Description</label>
     <input type="text" class="form-control" id="description" placeholder="Description">
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Tags
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Netlify</a></li>
-        <li><a class="dropdown-item" href="#">React</a></li>
-        <li><a class="dropdown-item" href="#">http</a></li>
-        <li><a class="dropdown-item" href="#">countdown</a></li>
-        <li><a class="dropdown-item" href="#">lorem-ipsum</a></li>
-      </ul>
-    </div>
+    <label for="tags">Tags</label>
+    <select name="tag" id="tags">
+
+        <option class="dropdown-item" value="Netlify">Netlify</option>
+        <option class="dropdown-item" value="React">React</option>
+        <option class="dropdown-item" value="http">http</option>
+        <option class="dropdown-item" value="countdown">countdown</option>
+        <option class="dropdown-item" value="lorem-ipsum">lorem-ipsum</option>
+      </select>
   </div>
   <button type="submit" id="repo-submit-btn" class="btn btn-primary">Create repository</button>
 </div>
