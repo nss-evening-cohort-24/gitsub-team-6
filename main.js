@@ -228,7 +228,7 @@ const reposOnDom = (array) => {
   let domString = ''
   for (const repo of array) {
     domString += `
-    <div class="card" style="width: 18rem;">
+    <div id="card" class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${repo.name}</h5>
@@ -244,7 +244,7 @@ const packagesOnDom = (array) => {
   let domString = ''
   for (const item of array) {
     domString += `
-  <div class="card" style="width: 18rem;">
+  <div id="card" class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title" ><img src="${item.imageUrl}" class="card-img-top pack-img" alt="...">${item.name}</h5>
     <p class="card-text">${item.description}</p>
@@ -263,7 +263,7 @@ const pinsOnDom = (array) => {
   let domString = ''
   for(const pinnedRepo of array) {
     domString += `
-    <div class="card" style="width: 18rem;">
+    <div id="card" class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${pinnedRepo.name}</h5>

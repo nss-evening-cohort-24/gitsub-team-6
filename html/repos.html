@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" href="/main.css">
 </head>
-<body id="repo">
+<body>
   <div class="navbar-div" id="navbar-id">
     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark" data-bs-theme="dark">
           <ul class="navbar-nav">
@@ -38,7 +38,7 @@
       <p class="card-text">Helping to elevate new people in the tech community with learning javascript and C#. President of The C# Club a community for new C# developers. </p>
       <div button-container>
       <a href="#" class="btn btn-secondary">Follow</a>
-      <a href="#" class="btn btn-secondary"> <i class="fa-regular fa-heart" style="color: #f72bad;"></i> Sponsor</a>
+      <a href="#" class="btn btn-secondary"> <i class="fa-regular fa-heart" style="color: #f72bad;"></i> Sponser</a>
       <a href="#" class="btn btn-secondary">...</a>
       <div class='followers-container'>
         <div class="followers"> <i class="fa-regular fa-user" style="color: #34bc56;"></i>1.8k followers</div>
@@ -54,37 +54,18 @@
   </div>
  </div>
  <div id="repos-container" class="container"></div>
- <div id="repo-form">
- <form>
- <div id="form-container" class="container">
-  <div class="form-group">
+ <div id="form-container" class="container"><div class="form-group">
     <div class="jumbotron">   <h1 class="display-4">Create a new repository</h1>
-    <label for="name">Repository name</label>
-    <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter repository name">
+    <label for="repository">Repository name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter project name">
     <p>Great repository names are short and memorable.</p>
   </div>
   <div class="form-group">
     <label for="description">Description</label>
     <input type="text" class="form-control" id="description" placeholder="Description">
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Tags
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Netlify</a></li>
-        <li><a class="dropdown-item" href="#">React</a></li>
-        <li><a class="dropdown-item" href="#">http</a></li>
-        <li><a class="dropdown-item" href="#">countdown</a></li>
-        <li><a class="dropdown-item" href="#">lorem-ipsum</a></li>
-        <li><a class="dropdown-item" href="#">http</a></li>
-      </ul>
-    </div>
   </div>
-  <button type="submit" id="repo-submit-btn" class="btn btn-primary">Create repository</button>
-</div>
-</div>
-</form>
-</div>
+  <button type="submit" class="btn btn-primary">Create repository</button>
+</form></div></div>
  
 <footer id="footer">
   <div class="footer-div" id="footer-id">

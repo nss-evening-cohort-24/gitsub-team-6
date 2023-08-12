@@ -1,18 +1,57 @@
-/* body {
+body {
   display: flex;
   flex-direction: column;
   justify-content: center; 
-} */
+}
+
+#profile-container {
+  display: flex;
+  margin: 10px;
+}
+
+
+#profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+
 
 #main-section {
   display: flex;
   flex: wrap;
-  margin-bottom: 100px;
+  justify-content: center;
 }
 
 .card-img-top {
-  width: 280px;
-  height: 205px;
+  width: 20px;
+  height: 20px;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#card {
+  margin: 10px;
+  flex-basis: 30%;
+}
+
+#bio-img {
+
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  padding: 10px;
 }
 
 .followers-container {
@@ -33,13 +72,23 @@
   justify-content: center;
 }
 
-footer {
-  position: fixed;
+#footer {  
   margin-top: 20px;
-  bottom: 0;
-   width: 100%;
-   background-color: rgb(62, 151, 210);
-   color: black;
-   text-align: center;
-   
+  width: 100%;
+  color: black;
+  text-align: center;
+  
+}
+
+#form-container {
+  margin: 10px;
+}
+
+#create {
+  margin: 5px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
 }
