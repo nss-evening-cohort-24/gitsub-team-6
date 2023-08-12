@@ -240,24 +240,6 @@ const reposOnDom = (array) => {
   renderToDom("#repos-container", domString);
 };
 
-
-
-// const projectsOnDom = (array) => {
-//   let domString = ''
-//   for(const project of array) {
-//     domString += `
-//     <div class="card" style="width: 18rem;">
-//   <img src="..." class="card-img-top" alt="...">
-//   <div class="card-body">
-//     <h5 class="card-title">${project.name}</h5>
-//     <p class="card-text">${project.description}</p>
-//     <a href="#" class="btn btn-primary" id='delete--${project.id}'>Go somewhere</a>
-//   </div>
-// </div>`
-//   }
-//   renderToDom("#projects-container", domString);
-// };
-
 const packagesOnDom = (array) => {
   let domString = ''
   for (const item of array) {
@@ -301,6 +283,7 @@ const tableRow = (array) => {
       <td>${item.name}</td>
       <td>${item.updated}</td>
       <td>${item.description}</td>
+      <td>${item.contributors}</td>
     </tr>
   `
   }
@@ -316,6 +299,8 @@ table +=`
       <th scope="col">Name</th>
       <th scope="col">Updated</th>
       <th scope="col">Description</th>
+      <th scope="col">Contributors</th>
+
     </tr>
   </thead>
   <tbody>
@@ -332,6 +317,7 @@ if (document.body.id === 'proj') {
 
 // EVENT LISTENERS
 const eventListeners = () => {
+
 let forms = document.querySelectorAll('form');
 // **Packages Form Submit**
 
@@ -365,10 +351,25 @@ const repoSubmit = (e) => {
     repos.push(repoObj)
     reposOnDom(repos)
 }
+forms.forEach(item => {
+  item.addEventListener('submit', repoSubmit)})
 
+
+// **Pins Form Submit**
+const pinSubmit = (e) => {
+  e.preventDefault();
+
+  const pinObj = {
+    id: pinnedRepos.length + 1,
+    name: document.querySelector('#name').value,
+    description: document.querySelector('#description').value
+    }
+    pinnedRepos.push(pinObj)
+    pinsOnDom(pinnedRepos)
+}
 
 forms.forEach(item => {
-  item.addEventListener('submit', repoSubmit)
+  item.addEventListener('submit', pinSubmit)
 })
 
 // **Projects Form Submit**
@@ -378,7 +379,9 @@ const projectSubmit = (e) => {
   const projectObj = {
     id: projects.length + 1,
     name: document.querySelector('#name').value,
-    description: document.querySelector('#description').value
+    description: document.querySelector('#description').value,
+    contributors: document.querySelector("#contributors").value,
+    updated: "Updated 0 seconds ago"
     }
     projects.push(projectObj)
     projectsOnDom(projects)
