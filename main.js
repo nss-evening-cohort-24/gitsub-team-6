@@ -330,7 +330,7 @@ if (document.body.id === 'proj') {
 }
 
 
-
+// EVENT LISTENERS
 const eventListeners = () => {
 let forms = document.querySelectorAll('form');
 // **Packages Form Submit**
