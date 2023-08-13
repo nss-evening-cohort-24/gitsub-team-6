@@ -429,11 +429,11 @@ const eventListeners = () => {
         }
       }
     });
+    searchButton.addEventListener("click", () => {
+      // Reset the value of the input field
+      searchInput.value = "";
+    });
   }
-  searchButton.addEventListener("click", () => {
-    // Reset the value of the input field
-    searchInput.value = "";
-  });
 
   let forms = document.querySelectorAll("form");
   // **Packages Form Submit**
