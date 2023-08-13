@@ -50,3 +50,30 @@ footer {
    text-align: center;
    
 }
+
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+input {
+  font-size: 1rem;
+}
+
+.projects-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(150px , 1fr));
+  gap: .25rem;
+  margin-top: 1rem;
+}
+
+.project-card {
+  border: 1px solid crimson;
+  background-color: white;
+  padding: .5rem;
+}
+
+.hide {
+  display: none;
+}
