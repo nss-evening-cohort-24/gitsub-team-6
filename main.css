@@ -33,6 +33,13 @@
   justify-content: center;
 }
 
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.repoAtt {
+  padding: 8px;
+}
 footer {
   position: relative;
   margin-top: 50px;

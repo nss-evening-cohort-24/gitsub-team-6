@@ -7,7 +7,7 @@ const repos = [
     isPinned: true,
     starNum: 15,
     branchNum: 5,
-    lastUpdated: 3082023,
+    lastUpdated: '20 days ago',
     issueNum: 10
   },
 
@@ -18,7 +18,7 @@ const repos = [
     isPinned: true,
     starNum: 23,
     branchNum: 2,
-    lastUpdated: 3082023,
+    lastUpdated: '40 days ago',
     issueNum: 9
   },
   
@@ -29,7 +29,7 @@ const repos = [
     isPinned: true,
     starNum: 100,
     branchNum: 4,
-    lastUpdated: 3082023,
+    lastUpdated: '50 days ago',
     issueNum: 4
   },
   
@@ -40,7 +40,7 @@ const repos = [
     isPinned: true,
     starNum: 443,
     branchNum: 6,
-    lastUpdated: 3082023,
+    lastUpdated: '60 days ago',
     issueNum: 6
   },
 
@@ -51,7 +51,7 @@ const repos = [
     isPinned: true,
     starNum: 11,
     branchNum: 11,
-    lastUpdated: 3082023,
+    lastUpdated: '2 days ago',
     issueNum: 11
   }
 ]
@@ -204,6 +204,7 @@ const getData = () => {
   switch (page) {
     case "main":
       pinsOnDom(pinnedRepos);
+      
       break;
     case "pack":
       packagesOnDom(packages);
@@ -228,13 +229,16 @@ const reposOnDom = (array) => {
   let domString = ''
   for (const repo of array) {
     domString += `
-    <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+    <div class="card" id=${repo.id} style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">${repo.name}</h5>
     <p class="card-text">${repo.description}</p>
-    <p class="card-text">${repo.tags}</p>
-    <a href="#" class="btn btn-primary" id='delete--${repo.id}'>Go somewhere</a>
+    <div class='flexContainer'>
+    <p class="card-text repoAtt">${repo.starNum ? `<i class="fa-regular fa-star" style="color: #353626;"></i> ${repo.starNum}` : ''}</p>
+    <p class="card-text repoAtt">${repo.branchNum ? `<i class="fas fa-code-branch" id="branch-btn"></i> ${repo.branchNum}` : ''}</p>
+    <p class="card-text repoAtt">${repo.lastUpdated}</p>
+    </div>
+    <p class="card-text">${repo.issueNum} issues need help</p>
   </div>
 </div>`
   }
@@ -352,7 +356,7 @@ const packageSubmit = (e) => {
     packageObj.imageUrl = 'https://cdn2.iconfinder.com/data/icons/leto-blue-big-data/64/big_data-10-512.png'
     packages.push(packageObj)
     packagesOnDom(packages)
-    forms.item.reset()
+    forms.reset
 }
 
 
@@ -369,10 +373,16 @@ const repoSubmit = (e) => {
     id: repos.length + 1,
     name: document.querySelector('#name').value,
     description: document.querySelector('#description').value,
-    tags: document.querySelector('#tags').value
+    isPinned: true,
+    starNum: "45",
+    branchNum: "3",
+    lastUpdated: "45 seconds ago",
+    issueNum: '0 issues need help'
     }
+    
     repos.push(repoObj)
     reposOnDom(repos)
+    forms.reset
 }
 forms.forEach(item => {
   item.addEventListener('submit', repoSubmit)})
@@ -390,6 +400,7 @@ const pinSubmit = (e) => {
     }
     pinnedRepos.push(pinObj)
     pinsOnDom(pinnedRepos)
+    forms.reset
 }
 
 forms.forEach(item => {
@@ -409,6 +420,7 @@ const projectSubmit = (e) => {
     }
     projects.push(projectObj)
     projectsOnDom(projects)
+    forms.reset
 }
 
 
