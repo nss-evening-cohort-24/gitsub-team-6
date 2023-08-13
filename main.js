@@ -1,5 +1,4 @@
-const repos = [ 
-
+const repos = [
   {
     id: 1,
     name: "Sorting Hat",
@@ -7,8 +6,8 @@ const repos = [
     isPinned: true,
     starNum: 15,
     branchNum: 5,
-    lastUpdated: '20 days ago',
-    issueNum: 10
+    lastUpdated: "20 days ago",
+    issueNum: 10,
   },
 
   {
@@ -18,10 +17,10 @@ const repos = [
     isPinned: true,
     starNum: 23,
     branchNum: 2,
-    lastUpdated: '40 days ago',
-    issueNum: 9
+    lastUpdated: "40 days ago",
+    issueNum: 9,
   },
-  
+
   {
     id: 3,
     name: "HTML Resume",
@@ -29,10 +28,10 @@ const repos = [
     isPinned: true,
     starNum: 100,
     branchNum: 4,
-    lastUpdated: '50 days ago',
-    issueNum: 4
+    lastUpdated: "50 days ago",
+    issueNum: 4,
   },
-  
+
   {
     id: 4,
     name: "Product Cards",
@@ -40,8 +39,8 @@ const repos = [
     isPinned: true,
     starNum: 443,
     branchNum: 6,
-    lastUpdated: '60 days ago',
-    issueNum: 6
+    lastUpdated: "60 days ago",
+    issueNum: 6,
   },
 
   {
@@ -51,95 +50,107 @@ const repos = [
     isPinned: true,
     starNum: 11,
     branchNum: 11,
-    lastUpdated: '2 days ago',
-    issueNum: 11
-  }
-]
+    lastUpdated: "2 days ago",
+    issueNum: 11,
+  },
+];
 
 const packages = [
-
   {
     id: 1,
-    imageUrl: 'https://cdn2.iconfinder.com/data/icons/leto-blue-big-data/64/big_data_olap_array_multidimentional_volume-64.png',
+    imageUrl:
+      "https://cdn2.iconfinder.com/data/icons/leto-blue-big-data/64/big_data_olap_array_multidimentional_volume-64.png",
     name: "Docker",
-    description: "A software platform used for building applications based on catainers - small and lightweight execution environments.",
-    learnMore: "https://www.docker.com"
+    description:
+      "A software platform used for building applications based on catainers - small and lightweight execution environments.",
+    learnMore: "https://www.docker.com",
   },
 
   {
     id: 2,
-    imageUrl: 'https://cdn1.iconfinder.com/data/icons/leto-design-creativity/64/__logo_symbol_wordmark-64.png',
+    imageUrl:
+      "https://cdn1.iconfinder.com/data/icons/leto-design-creativity/64/__logo_symbol_wordmark-64.png",
     name: "Apache Maven",
-    description: "A default package manager used for the java programming language and the Java runtime environment.",
-    learnMore: "https://maven.apache.org/"
+    description:
+      "A default package manager used for the java programming language and the Java runtime environment.",
+    learnMore: "https://maven.apache.org/",
   },
 
   {
     id: 3,
-    imageUrl: 'https://cdn2.iconfinder.com/data/icons/leto-blue-big-data/64/big_data_cdn_content_delivery_network_layers-64.png',
+    imageUrl:
+      "https://cdn2.iconfinder.com/data/icons/leto-blue-big-data/64/big_data_cdn_content_delivery_network_layers-64.png",
     name: "Nuget",
-    description: "A free and open source package manager used for the Microsoft development platforms including .NET.",
-    learnMore: "https://www.nuget.org/"
+    description:
+      "A free and open source package manager used for the Microsoft development platforms including .NET.",
+    learnMore: "https://www.nuget.org/",
   },
 
   {
     id: 4,
-    imageUrl: 'https://cdn1.iconfinder.com/data/icons/space-travel-flat/340/space_astronomy_system_planet_universe_galaxy_star_neptune-64.png',
+    imageUrl:
+      "https://cdn1.iconfinder.com/data/icons/space-travel-flat/340/space_astronomy_system_planet_universe_galaxy_star_neptune-64.png",
     name: "RubyGems",
-    description: "A standard format for distributing Ruby programs and libraries used for the Ruby programming language.",
-    learnMore: "https://rubygems.org/"
+    description:
+      "A standard format for distributing Ruby programs and libraries used for the Ruby programming language.",
+    learnMore: "https://rubygems.org/",
   },
-  
+
   {
     id: 5,
-    imageUrl: 'https://cdn1.iconfinder.com/data/icons/space-travel-flat/340/space_astronomy_universe_galaxy_star_cosmos_planet_science_astrology-64.png',
+    imageUrl:
+      "https://cdn1.iconfinder.com/data/icons/space-travel-flat/340/space_astronomy_universe_galaxy_star_cosmos_planet_science_astrology-64.png",
     name: "npm",
-    description: "A package manager for JavaScript, including with Node.js. npm makes it easy for developers to share and reuse code.",
-    learnMore: "https://www.npmjs.com/"
+    description:
+      "A package manager for JavaScript, including with Node.js. npm makes it easy for developers to share and reuse code.",
+    learnMore: "https://www.npmjs.com/",
   },
 
   {
     id: 6,
-    imageUrl: 'https://cdn1.iconfinder.com/data/icons/space-travel-flat/340/space_astronomy_system_planet_universe_galaxy_star_jupiter-64.png',
+    imageUrl:
+      "https://cdn1.iconfinder.com/data/icons/space-travel-flat/340/space_astronomy_system_planet_universe_galaxy_star_jupiter-64.png",
     name: "Containers",
-    description: "A single place for your team to manage Docker images and decide who can see and access your images.",
-    learnMore: "https://www.solarwinds.com/resources/it-glossary/container"
-  }
-
+    description:
+      "A single place for your team to manage Docker images and decide who can see and access your images.",
+    learnMore: "https://www.solarwinds.com/resources/it-glossary/container",
+  },
 ];
 
 const projects = [
-
   {
     id: 1,
     name: "Lorem Ipsum",
     updated: "Updated 23 seconds ago",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-    contributors: ["cnfairall", "Bonni535"]
-    
+    description:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+    contributors: ["cnfairall", "Bonni535"],
   },
 
   {
     id: 2,
     name: "Dangle Autem",
     updated: "Updated 1 hour ago",
-    description: "Illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo",
-    contributors: ["cnfairall", "GitEbachS"]
+    description:
+      "Illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo",
+    contributors: ["cnfairall", "GitEbachS"],
   },
 
   {
     id: 3,
     name: "Bleegle Ramoon",
     updated: "Updated 14 days ago",
-    description: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
-    contributors: ["JohnnySaniat", "JSPICELA"]
+    description:
+      "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
+    contributors: ["JohnnySaniat", "JSPICELA"],
   },
 
   {
     id: 4,
     name: "Glaflarbo",
     updated: "Updated 44 minutes ago",
-    description: "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+    description:
+      "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
   },
 
   {
@@ -147,9 +158,9 @@ const projects = [
     name: "Praesent Gravida",
     updated: "Updated 3 months ago",
     description: "Proin finibus placerat urna ac dignissim.",
-    contributors: ["JohnnySaniat", "Bonni535", "GitEbachS", "JSPICELA"]
+    contributors: ["JohnnySaniat", "Bonni535", "GitEbachS", "JSPICELA"],
   },
-]
+];
 
 const pinnedRepos = [
   {
@@ -158,16 +169,17 @@ const pinnedRepos = [
     description: "An app that pulls the local heelys stock",
     language: "JavaScript",
     starred: 400,
-    branchNum: 7
+    branchNum: 7,
   },
 
   {
     id: 2,
     name: "nss-lrem ipsum-generator",
-    description: "a lorm ipsum generaator with full stack words and terms from the curriculum",
+    description:
+      "a lorm ipsum generaator with full stack words and terms from the curriculum",
     language: "JavaScript",
     starred: 37,
-    branchNum: 12
+    branchNum: 12,
   },
 
   {
@@ -176,35 +188,36 @@ const pinnedRepos = [
     description: "HTTRiRi - HTTP Status Codes as Portrayed by Rihanna GIFs",
     language: "TypeScript",
     starred: 27,
-    branchNum: 11
+    branchNum: 11,
   },
 
   {
     id: 4,
     name: "httrobinson",
-    description: "HTTRiRi - HTTP Status Codes as Portrayed by Tim Robinson GIFs",
+    description:
+      "HTTRiRi - HTTP Status Codes as Portrayed by Tim Robinson GIFs",
     language: "TypeScript",
     starred: 2,
-    branchNum: 32
+    branchNum: 32,
   },
 
   {
     id: 5,
     name: "ambition-fund-website",
-    description: "Website for www.ambitionfund.org, micro-grant program to provide support for underrepresented people who need financial assistance pursuing professional development opportunities in technology...",
+    description:
+      "Website for www.ambitionfund.org, micro-grant program to provide support for underrepresented people who need financial assistance pursuing professional development opportunities in technology...",
     language: "Javascript",
     starred: 7,
-    branchNum: 99
-  }
+    branchNum: 99,
+  },
 ];
-
 
 const getData = () => {
   let page = document.body.id;
   switch (page) {
     case "main":
       pinsOnDom(pinnedRepos);
-      
+
       break;
     case "pack":
       packagesOnDom(packages);
@@ -223,10 +236,8 @@ const renderToDom = (divId, htmlToRender) => {
   targetedId.innerHTML = htmlToRender;
 };
 
-
-
 const reposOnDom = (array) => {
-  let domString = ''
+  let domString = "";
   for (const repo of array) {
     domString += `
     <div class="card" id=${repo.id} style="width: 18rem;">
@@ -234,19 +245,27 @@ const reposOnDom = (array) => {
     <h5 class="card-title">${repo.name}</h5>
     <p class="card-text">${repo.description}</p>
     <div class='flexContainer'>
-    <p class="card-text repoAtt">${repo.starNum ? `<i class="fa-regular fa-star" style="color: #353626;"></i> ${repo.starNum}` : ''}</p>
-    <p class="card-text repoAtt">${repo.branchNum ? `<i class="fas fa-code-branch" id="branch-btn"></i> ${repo.branchNum}` : ''}</p>
+    <p class="card-text repoAtt">${
+      repo.starNum
+        ? `<i class="fa-regular fa-star" style="color: #353626;"></i> ${repo.starNum}`
+        : ""
+    }</p>
+    <p class="card-text repoAtt">${
+      repo.branchNum
+        ? `<i class="fas fa-code-branch" id="branch-btn"></i> ${repo.branchNum}`
+        : ""
+    }</p>
     <p class="card-text repoAtt">${repo.lastUpdated}</p>
     </div>
     <p class="card-text">${repo.issueNum} issues need help</p>
   </div>
-</div>`
+</div>`;
   }
   renderToDom("#repos-container", domString);
 };
 
 const packagesOnDom = (array) => {
-  let domString = ''
+  let domString = "";
   for (const item of array) {
     domString += `
   <div class="card" style="width: 18rem;">
@@ -257,16 +276,14 @@ const packagesOnDom = (array) => {
     <a href="#" class="btn btn-secondary" id='delete--${item.id}'>Delete</a>
   </div>
   </div>
-`
-}
-renderToDom("#packages-container", domString);
+`;
+  }
+  renderToDom("#packages-container", domString);
 };
 
-
-
 const pinsOnDom = (array) => {
-  let domString = ''
-  for(const pinnedRepo of array) {
+  let domString = "";
+  for (const pinnedRepo of array) {
     domString += `
     <div class="card" style="width: 18rem;">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-display" viewBox="0 0 16 16">
@@ -284,29 +301,29 @@ const pinsOnDom = (array) => {
 <p> ${pinnedRepo.branchNum} </p> 
 </i>
   </div>
-</div>`
+</div>`;
   }
   renderToDom("#pins-container", domString);
 };
 
 const tableRow = (array) => {
-  let domString = ''
+  let domString = "";
   for (const item of array) {
-    domString +=`
+    domString += `
     <tr>
       <td>${item.name}</td>
       <td>${item.updated}</td>
       <td>${item.description}</td>
       <td>${item.contributors}</td>
     </tr>
-  `
+  `;
   }
   return domString;
-}
+};
 
 const projectsOnDom = () => {
-let table = ''
-table +=`
+  let table = "";
+  table += `
 <table class="table table-dark table-striped" style="width: 600px">
   <thead>
     <tr>
@@ -321,125 +338,201 @@ table +=`
   ${tableRow(projects)}
 </tbody>
 </table>
-`
+`;
 
-if (document.body.id === 'proj') {
-  renderToDom('#projects-container', table)
-}
-}
+  if (document.body.id === "proj") {
+    renderToDom("#projects-container", table);
+  }
+};
 // Toggle star button
-  // const toggleFavorite = (event) => {
-  //   if (event.target.id.includes("fav-btn")) {
-  //     const [, id] = event.target.id.split("--");
+// const toggleFavorite = (event) => {
+//   if (event.target.id.includes("fav-btn")) {
+//     const [, id] = event.target.id.split("--");
 
-  //     const index = referenceList.findIndex(taco => taco.id === Number(id))
+//     const index = referenceList.findIndex(taco => taco.id === Number(id))
 
-  //     pinnedRepos.favorite = !pinnedRepos.favorite
-  //     pinsOnDom(pinnedRepos);
-  //   }};
-
+//     pinnedRepos.favorite = !pinnedRepos.favorite
+//     pinsOnDom(pinnedRepos);
+//   }};
 
 // EVENT LISTENERS
 const eventListeners = () => {
+  const repoSearchButton = document.getElementById("search-button-2");
+  const repoSearchInput = document.getElementById("search-input-2");
 
-let forms = document.querySelectorAll('form');
-// **Packages Form Submit**
+  if (repoSearchButton != null) {
+    repoSearchButton.addEventListener("click", () => {
+      const inputValue = repoSearchInput.value;
+      let repoSearchArray = [];
+      for (const iterator of repos) {
+        if (iterator.name.toLowerCase() === inputValue.toLowerCase()) {
+          repoSearchArray.push(iterator);
+          reposOnDom(repoSearchArray);
+          const repoDiv = document.querySelector("#repos-container");
+          repoDiv.innerHTML = `<div class="card" id=${
+            iterator.id
+          } style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">${iterator.name}</h5>
+          <p class="card-text">${iterator.description}</p>
+          <div class='flexContainer'>
+          <p class="card-text repoAtt">${
+            iterator.starNum
+              ? `<i class="fa-regular fa-star" style="color: #353626;"></i> ${iterator.starNum}`
+              : ""
+          }</p>
+          <p class="card-text repoAtt">${
+            iterator.branchNum
+              ? `<i class="fas fa-code-branch" id="branch-btn"></i> ${iterator.branchNum}`
+              : ""
+          }</p>
+          <p class="card-text repoAtt">${iterator.lastUpdated}</p>
+          </div>
+          <p class="card-text">${iterator.issueNum} issues need help</p>
+        </div>
+      </div>`;
+        }
+      }
+      repoSearchButton.addEventListener("click", () => {
+        // Reset the value of the input field
+        repoSearchInput.value = "";
+      });
+    });
+  }
 
-const packageSubmit = (e) => {
-  e.preventDefault();
-
-  const packageObj = {
-    id: packages.length + 1,
-    name: document.querySelector('#name').value,
-    description: document.querySelector('#description').value
-    }
-    packageObj.imageUrl = 'https://cdn2.iconfinder.com/data/icons/leto-blue-big-data/64/big_data-10-512.png'
-    packages.push(packageObj)
-    packagesOnDom(packages)
-    forms.reset
-}
-
-
-forms.forEach(item => {
-  item.addEventListener('submit', packageSubmit)
-});
-
-
-// **Repos Form Submit**
-const repoSubmit = (e) => {
-  e.preventDefault();
-
-  const repoObj = {
-    id: repos.length + 1,
-    name: document.querySelector('#name').value,
-    description: document.querySelector('#description').value,
-    isPinned: true,
-    starNum: "45",
-    branchNum: "3",
-    lastUpdated: "45 seconds ago",
-    issueNum: '0 issues need help'
-    }
+  const searchButton = document.getElementById("search-button");
+  const searchInput = document.getElementById("search-input");
+  if (searchButton != null) {
+    searchButton.addEventListener("click", () => {
+      const inputValue = searchInput.value;
+      let searchArray = [];
+      for (const iterator of projects) {
+        if (iterator.name.toLowerCase() === inputValue.toLowerCase()) {
+          searchArray.push(iterator);
+          tableRow(searchArray);
+          projectsOnDom(searchArray);
+          const projectDiv = document.querySelector("#projects-container");
+          projectDiv.innerHTML = `<table class="table table-dark table-striped" style="width: 600px">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Updated</th>
+          <th scope="col">Description</th>
+          <th scope="col">Contributors</th>
     
-    repos.push(repoObj)
-    reposOnDom(repos)
-    forms.reset
-}
-forms.forEach(item => {
-  item.addEventListener('submit', repoSubmit)})
+        </tr>
+      </thead>
+      <tbody>
+      ${tableRow(searchArray)}
+    </tbody>
+    </table>`;
+        }
+      }
+    });
+  }
+  searchButton.addEventListener("click", () => {
+    // Reset the value of the input field
+    searchInput.value = "";
+  });
 
+  let forms = document.querySelectorAll("form");
+  // **Packages Form Submit**
 
-// **Pins Form Submit**
-const pinSubmit = (e) => {
-  e.preventDefault();
+  const packageSubmit = (e) => {
+    e.preventDefault();
 
-  const pinObj = {
-    id: pinnedRepos.length + 1,
-    name: document.querySelector('#name').value,
-    description: document.querySelector('#description').value,
-    tags: document.querySelector('#tags').value
+    const packageObj = {
+      id: packages.length + 1,
+      name: document.querySelector("#name").value,
+      description: document.querySelector("#description").value,
+    };
+    packageObj.imageUrl =
+      "https://cdn2.iconfinder.com/data/icons/leto-blue-big-data/64/big_data-10-512.png";
+    packages.push(packageObj);
+    packagesOnDom(packages);
+    forms.reset;
+  };
+
+  forms.forEach((item) => {
+    item.addEventListener("submit", packageSubmit);
+  });
+
+  // **Repos Form Submit**
+  const repoSubmit = (e) => {
+    e.preventDefault();
+
+    const repoObj = {
+      id: repos.length + 1,
+      name: document.querySelector("#name").value,
+      description: document.querySelector("#description").value,
+      isPinned: true,
+      starNum: "45",
+      branchNum: "3",
+      lastUpdated: "45 seconds ago",
+      issueNum: "0 issues need help",
+    };
+
+    repos.push(repoObj);
+    reposOnDom(repos);
+    forms.reset;
+  };
+  forms.forEach((item) => {
+    item.addEventListener("submit", repoSubmit);
+  });
+
+  // **Pins Form Submit**
+  const pinSubmit = (e) => {
+    e.preventDefault();
+
+    const pinObj = {
+      id: pinnedRepos.length + 1,
+      name: document.querySelector("#name").value,
+      description: document.querySelector("#description").value,
+      tags: document.querySelector("#tags").value,
+    };
+    pinnedRepos.push(pinObj);
+    pinsOnDom(pinnedRepos);
+    forms.reset;
+  };
+
+  forms.forEach((item) => {
+    item.addEventListener("submit", pinSubmit);
+  });
+
+  // **Projects Form Submit**
+  const projectSubmit = (e) => {
+    e.preventDefault();
+
+    const projectObj = {
+      id: projects.length + 1,
+      name: document.querySelector("#name").value,
+      description: document.querySelector("#description").value,
+      contributors: document.querySelector("#contributors").value,
+      updated: "Updated 0 seconds ago",
+    };
+    projects.push(projectObj);
+    projectsOnDom(projects);
+    forms.reset;
+  };
+
+  forms.forEach((item) => {
+    item.addEventListener("submit", projectSubmit);
+  });
+
+  const removePackage = document.querySelector("#packages-container");
+  removePackage.addEventListener("click", (e) => {
+    if (e.target.id.includes("delete")) {
+      const [, id] = e.target.id.split("--");
+      const index = packages.findIndex((package) => package.id === Number(id));
+      packages.splice(index, 1);
+      packagesOnDom(packages);
     }
-    pinnedRepos.push(pinObj)
-    pinsOnDom(pinnedRepos)
-    forms.reset
-}
-
-forms.forEach(item => {
-  item.addEventListener('submit', pinSubmit)
-})
-
-// **Projects Form Submit**
-const projectSubmit = (e) => {
-  e.preventDefault();
-
-  const projectObj = {
-    id: projects.length + 1,
-    name: document.querySelector('#name').value,
-    description: document.querySelector('#description').value,
-    contributors: document.querySelector("#contributors").value,
-    updated: "Updated 0 seconds ago"
-    }
-    projects.push(projectObj)
-    projectsOnDom(projects)
-    forms.reset
-}
-
-
-forms.forEach(item => {
-  item.addEventListener('submit', projectSubmit)
-})
-
-const removePackage = document.querySelector('#packages-container')
-removePackage.addEventListener('click', (e) => {
-  if(e.target.id.includes('delete')) {
-    const [, id] = e.target.id.split('--')
-    const index = packages.findIndex(package => package.id === Number(id))
-    packages.splice(index, 1)
-    packagesOnDom(packages)
-    }
-})
-
+  });
 };
 
+// search bar for projects page
+
+//search bar for repos
 
 const startApp = () => {
   getData();
