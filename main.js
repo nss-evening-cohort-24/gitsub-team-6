@@ -461,7 +461,7 @@ const eventListeners = () => {
       starNum: "45",
       branchNum: "3",
       lastUpdated: "45 seconds ago",
-      issueNum: "0 issues need help",
+      issueNum: "0",
     };
 
     repos.push(repoObj);
