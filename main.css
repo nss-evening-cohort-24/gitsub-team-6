@@ -12,7 +12,6 @@
 }
 
 .followers-container {
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -37,7 +36,7 @@
 .search-wrapper {
   display: flex;
   flex-direction: column;
-  gap: .25rem;
+  gap: 0.25rem;
 }
 
 input {
@@ -46,15 +45,15 @@ input {
 
 .projects-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(150px , 1fr));
-  gap: .25rem;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.25rem;
   margin-top: 1rem;
 }
 
 .project-card {
   border: 1px solid crimson;
   background-color: white;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .hide {
@@ -135,4 +134,53 @@ input:checked[type="checkbox"]:after{
   color: black;
   text-align: center;
   
+}
+
+
+#fav-btn {
+  height: 10px;
+  width: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="checkbox"] {
+  height: 10px;
+  width: 10px;
+  background-color: black;
+  position: relative;
+  outline: none;
+  transform: rotate(45deg);
+  -webkit-appearance: none;
+}
+
+input[type="checkbox"]:before {
+  position: absolute;
+  content: "";
+  background-color: black;
+  height: 60%;
+  width: 100%;
+  top: -59%;
+  border-radius: 75px 75px 0 0;
+  outline-color: black;
+  outline: 5px;
+}
+
+input[type="checkbox"]:after {
+  position: absolute;
+  content: "";
+  background-color: black;
+  height: 60%;
+  width: 100%;
+  transform: rotate(-90deg);
+  border-radius: 75px 75px 0 0;
+  top: 20%;
+  right: 79%;
+}
+
+input[type="checkbox"]:checked,
+input:checked[type="checkbox"]:before,
+input:checked[type="checkbox"]:after {
+  background-color: red;
 }
