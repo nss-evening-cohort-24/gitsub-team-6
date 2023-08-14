@@ -29,7 +29,15 @@ body {
   justify-content: space-around;
   margin: 15px;
 }
-
+#profileBtn {
+ height: 40px;
+ display: flex;
+ flex-wrap: wrap;
+}
+#sponserBtn {
+  height: 40px;
+  width: 120px;
+}
 .followers-container {
   display: flex;
   flex-wrap: wrap;
