@@ -244,20 +244,22 @@ const reposOnDom = (array) => {
   <div class="card-body">
     <h5 class="card-title">${repo.name}</h5>
     <p class="card-text">${repo.description}</p>
-    <div class='flexContainer'>
-    <p class="card-text repoAtt">${
-      repo.starNum
-        ? `<i class="fa-regular fa-star" style="color: #353626;"></i> ${repo.starNum}`
-        : ""
-    }</p>
-    <p class="card-text repoAtt">${
-      repo.branchNum
-        ? `<i class="fas fa-code-branch" id="branch-btn"></i> ${repo.branchNum}`
-        : ""
-    }</p>
-    <p class="card-text repoAtt">${repo.lastUpdated}</p>
-    </div>
-    <p class="card-text">${repo.issueNum} issues need help</p>
+      <div class='repoWrap'>
+        <div class='flexContainer'>
+          <div "id="fav-btn"> <input type="checkbox"></div> 
+              <p class="card-text numPad" >${repo.starNum}</p>
+          </div>
+          <div>
+            <p class="card-text">${
+              repo.branchNum
+                ? `<i class="fas fa-code-branch" id="branch-btn"></i> ${repo.branchNum}`
+                : ""
+            }</p>
+          </div>
+          <p class="card-text ">${repo.lastUpdated}</p>
+        </div>
+      </div>
+    <p class="card-text issues">${repo.issueNum} issues need help</p>
   </div>
 </div>`;
   }
@@ -478,7 +480,8 @@ const eventListeners = () => {
       id: pinnedRepos.length + 1,
       name: document.querySelector("#name").value,
       description: document.querySelector("#description").value,
-      tags: document.querySelector("#tags").value,
+      language: document.querySelector("#language").value,
+      branchNum: '3'
     };
     pinnedRepos.push(pinObj);
     pinsOnDom(pinnedRepos);
@@ -511,6 +514,7 @@ const eventListeners = () => {
 
   const removePackage = document.querySelector("#packages-container");
   removePackage.addEventListener("click", (e) => {
+    e.preventDefault();
     if (e.target.id.includes("delete")) {
       const [, id] = e.target.id.split("--");
       const index = packages.findIndex((package) => package.id === Number(id));
@@ -518,11 +522,10 @@ const eventListeners = () => {
       packagesOnDom(packages);
     }
   });
+
 };
 
-// search bar for projects page
 
-//search bar for repos
 
 const startApp = () => {
   getData();
