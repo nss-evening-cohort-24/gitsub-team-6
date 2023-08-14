@@ -205,7 +205,7 @@ const pinnedRepos = [
     id: 5,
     name: "ambition-fund-website",
     description:
-      "Website for www.ambitionfund.org, micro-grant program to provide support for underrepresented people who need financial assistance pursuing professional development opportunities in technology...",
+      "Website for www.ambitionfund.org, micro-grant program to provide support for underrepresented people who need financial assistance pursuing professional development opportunities in technology.",
     language: "Javascript",
     starred: 7,
     branchNum: 99,
@@ -240,28 +240,31 @@ const reposOnDom = (array) => {
   let domString = "";
   for (const repo of array) {
     domString += `
-    <div class="card" id=${repo.id} style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">${repo.name}</h5>
-    <p class="card-text">${repo.description}</p>
-      <div class='repoWrap'>
-        <div class='flexContainer'>
-          <div "id="fav-btn"> <input type="checkbox"></div> 
-              <p class="card-text numPad" >${repo.starNum}</p>
+    <div class="card" id=${repo.id}>
+      <div class="card-body">
+        <h5 class="card-title">${repo.name}</h5>
+        <p class="card-text">${repo.description}</p>
+        <div class='repoWrap'>
+          <div class='flexContainer'>
+            <div id="fav-btn"> <input type="checkbox"></div> 
+                <p class="card-text numPad" >${repo.starNum}</p>
           </div>
-          <div>
-            <p class="card-text">${
-              repo.branchNum
-                ? `<i class="fas fa-code-branch" id="branch-btn"></i> ${repo.branchNum}`
-                : ""
-            }</p>
+          <div class='flexContainer'>
+              <p class="card-text">${
+                repo.branchNum
+                  ? `<i class="fas fa-code-branch" id="branch-btn"></i> ${repo.branchNum}`
+                  : ""
+              }</p>
           </div>
-          <p class="card-text ">${repo.lastUpdated}</p>
+          <div class='flexContainer'>
+            <p class="card-text ">${repo.lastUpdated}</p>
+          </div>
+          <div class='flexContainer'>
+            <p class="card-text issues">${repo.issueNum} issues need help</p>
+          </div>
         </div>
       </div>
-    <p class="card-text issues">${repo.issueNum} issues need help</p>
-  </div>
-</div>`;
+    </div>`;
   }
   renderToDom("#repos-container", domString);
 };
@@ -287,23 +290,24 @@ const pinsOnDom = (array) => {
   let domString = "";
   for (const pinnedRepo of array) {
     domString += `
-    <div class="card" style="width: 18rem;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-display" viewBox="0 0 16 16">
-    <path d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4c0 .667.083 1.167.25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75c.167-.333.25-.833.25-1.5H2s-2 0-2-2V4zm1.398-.855a.758.758 0 0 0-.254.302A1.46 1.46 0 0 0 1 4.01V10c0 .325.078.502.145.602.07.105.17.188.302.254a1.464 1.464 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.758.758 0 0 0 .254-.302 1.464 1.464 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.757.757 0 0 0-.302-.254A1.46 1.46 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145z"/>
-  </svg>
-  <div class="card-body">
-    <h5 class="card-title">${pinnedRepo.name}</h5>
-    <p class="card-text">${pinnedRepo.description}</p>
-    <p class="card-text">${pinnedRepo.language}</p>
-    <div "id="fav-btn"> <input type="checkbox">
-    <p>${pinnedRepo.starred}</p>
-    </div>
-</svg>
-<i class="fas fa-code-branch" id="branch-btn"> 
-<p> ${pinnedRepo.branchNum} </p> 
-</i>
-  </div>
-</div>`;
+    <div class="card pin" style="width: 18rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-display" viewBox="0 0 16 16">
+      <path d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4c0 .667.083 1.167.25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75c.167-.333.25-.833.25-1.5H2s-2 0-2-2V4zm1.398-.855a.758.758 0 0 0-.254.302A1.46 1.46 0 0 0 1 4.01V10c0 .325.078.502.145.602.07.105.17.188.302.254a1.464 1.464 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.758.758 0 0 0 .254-.302 1.464 1.464 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.757.757 0 0 0-.302-.254A1.46 1.46 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145z"/>
+      </svg>
+      <div class="card-body">
+        <h5 class="card-title">${pinnedRepo.name}</h5>
+        <p class="card-text">${pinnedRepo.description}</p>
+      </div>
+      <div class="icons">
+          <p class="lang">${pinnedRepo.language}</p>
+          <div class="fav-btn"> <input type="checkbox">
+            <p>${pinnedRepo.starred}</p>
+          </div>
+          <i class="fas fa-code-branch" id="branch-btn"> 
+            <p> ${pinnedRepo.branchNum} </p> 
+          </i>
+        </div>
+    </div>`;
   }
   renderToDom("#pins-container", domString);
 };
@@ -326,7 +330,7 @@ const tableRow = (array) => {
 const projectsOnDom = () => {
   let table = "";
   table += `
-<table class="table table-dark table-striped" style="width: 600px">
+<table class="table table-dark table-striped">
   <thead>
     <tr>
       <th scope="col">Name</th>
@@ -461,7 +465,7 @@ const eventListeners = () => {
       starNum: "45",
       branchNum: "3",
       lastUpdated: "45 seconds ago",
-      issueNum: "0 issues need help",
+      issueNum: "0",
     };
 
     repos.push(repoObj);
