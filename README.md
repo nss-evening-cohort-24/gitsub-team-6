@@ -17,3 +17,5 @@ List of contributors and links to their GH profiles
   Luca Bonini: https://github.com/Bonni535
   Johnny Saniat: https://github.com/JohnnySaniat
 Link to Loom video walkthrough:
+https://team6githubpage.netlify.app/
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a7aa8681-8ece-4441-8f85-79aaaf5be643/deploy-status)](https://app.netlify.com/sites/stupendous-cupcake-443e78/deploys)
